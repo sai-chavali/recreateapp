@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('calling service');
-    this.httpService.get('/api/users').subscribe(res => {
+    this.httpService.get('/users').subscribe(res => {
       console.log('got a response from server', res);
     });
   }
