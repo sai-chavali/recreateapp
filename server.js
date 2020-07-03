@@ -33,7 +33,7 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
 // Configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/', routes);
+app.use('/api', routes);
 
 // Step 3
 if (process.env.NODE_ENV === 'production') {
