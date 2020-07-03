@@ -37,10 +37,10 @@ app.use('/', routes);
 
 // Step 3
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static( 'client/build' ));
+  app.use(express.static( 'client/dist/recreateapp' ));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html')); // relative path
+    res.sendFile(path.join(__dirname, 'client', 'dist/recreateapp', 'index.html')); // relative path
   });
 }
 
